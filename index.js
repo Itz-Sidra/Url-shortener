@@ -52,12 +52,13 @@ app.get('/:short', async (c) => {
     }
 });
 
+const PORT = process.env.PORT || 3000;
 // Start the server
 serve({
     fetch: app.fetch,
     port: 3000,
 });
 
-console.log('Server running on http://localhost:3000');
+console.log(`Server running on http://localhost:${PORT}`);
 
 export default app;
